@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('question', params.question_id)
+    return this.store.findRecord('question', params.question_id);
   },
 
   actions: {
@@ -13,17 +13,17 @@ export default Ember.Route.extend({
         }
       });
       question.save();
-      this.transitionTo('question')
+      this.transitionTo('question');
     },
 
     destroyQuestion(question) {
       var answer_deletions = question.get('answers').map(function(answer){
-        return answer.destroyRecord
+        return answer.destroyRecord();
       });
       Ember.RSVP.all(answer_deletions).then(function(){
         return question.destroyRecord();
       })
-      this.transitionTo('question');
+      this.transitionTo('index');
     },
 
     saveAnswer(params) {
