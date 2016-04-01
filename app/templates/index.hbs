@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Ask a question!</h2>
+  <div class="questionFeed">
+    <ul>
+      {{#each model.question as |question|}}
+        {{question-tile question=question}}
+      {{/each}}
+    </ul>
+
+    <!-- {{new-question save="save"}}  -->
+  </div>
+</div>
