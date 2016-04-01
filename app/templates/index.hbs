@@ -2,9 +2,10 @@
   <h2>Ask a question!</h2>
   <div class="questionFeed">
     <ul>
-      {{#each model.question as |question|}}
+      {{#each model as |question|}}
         {{question-tile question=question}}
       {{/each}}
+<!-- the question on the left of the = refers to the variable name used within the component and the question on the right refers to the model object we're assigning this variable to. -->
     </ul>
 
     <!-- {{new-question save="save"}}  -->
