@@ -1,2 +1,14 @@
-{{question.text}} by {{question.author}}
-{{question.notes}}
+<div class="questionPage">
+  <h1><strong>{{question.text}}</strong></h1>
+  <h4>by {{question.author}}</h4>
+  <p>{{question.notes}}</p>
+
+  <button {{action 'delete' question}}>Delete</button>
+  <button {{action 'update' question}}>Edit</button>
+</div>
+
+<ul>
+  {{#each model.question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
