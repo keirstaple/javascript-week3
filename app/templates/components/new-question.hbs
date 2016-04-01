@@ -3,15 +3,15 @@
     <div>
       <form>
         <div class="form-group">
-          <label for="text">Ask a question:</label>
+          <label for="text">Ask a question:</label><br>
           {{input value=text id="text"}}
         </div>
         <div class="form-group">
-          <label for="author">Name:</label>
+          <label for="author">Name:</label><br>
           {{input value=author id="author"}}
         </div>
         <div class="form-group">
-          <label for="notes">Details about your question:</label>
+          <label for="notes">Details about your question:</label><br>
           {{input value=notes id="notes"}}
         </div>
         <button {{action 'save' question}}>Ask!</button>

@@ -1,2 +1,9 @@
-<!-- {{question.text}} by {{question.author}}
-{{question.notes}} -->
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
+{{edit-question question=model update="update"}}
+
+<h2>Answers</h2>
+{{new-answer saveAnswer="saveAnswer" question=model}}
+
+{{#each model.answers as |answer|}}
+  {{answer-tile answer=answer}}
+{{/each}}
