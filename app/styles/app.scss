@@ -1,0 +1,37 @@
+//application.hbs
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #339966;
+  opacity: 0.5;
+  width: 101vw;
+  height: 7.5vh;
+  margin-left: -1vw;
+  margin-right: -1vw;
+  margin-top: -1vh;
+  .links{
+  position: relative;
+  left: 45%;
+  top: 20%;
+  margin-top: 10px;
+  margin-right: 5vw;
+    .link{
+      color: #0d261a;
+    }
+  }
+  .navTitle {
+    color: #0d261a;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: -15px;
+  }
+}
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
